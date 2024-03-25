@@ -4,4 +4,6 @@ public interface IOService {
     String read();
 
     void write(String text);
+
+    Integer readInt();
 }

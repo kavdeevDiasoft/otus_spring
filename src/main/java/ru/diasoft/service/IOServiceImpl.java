@@ -1,9 +1,17 @@
 package ru.diasoft.service;
 
+import org.springframework.stereotype.Service;
+
 import java.util.Scanner;
 
+@Service
 public class IOServiceImpl implements IOService {
-    private final Scanner sc = new Scanner(System.in);
+    private Scanner sc = new Scanner(System.in);
+
+    @Override
+    public void write(String text) {
+        System.out.println(text);
+    }
 
     @Override
     public String read() {
@@ -11,8 +19,8 @@ public class IOServiceImpl implements IOService {
     }
 
     @Override
-    public void write(String text) {
-        System.out.println(text);
+    public Integer readInt() {
+        return sc.nextInt();
     }
 
 }
